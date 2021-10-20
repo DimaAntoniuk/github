@@ -30,3 +30,4 @@ if __name__ == "__main__":
     else:
         print('WRONG URL(((')
     time.sleep(3)
+    my_driver.quit()
