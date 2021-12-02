@@ -14,10 +14,6 @@ def test_github_login(browser):
     github_main_page = GitHubMainManager(browser, browser.driver.current_url)
     profile = github_main_page.get_profile()
     assert config.LOGIN in profile
-    
-
-def test_create_new_repo(browser):
-    github_main_page = GitHubMainManager(browser, browser.driver.current_url)
     github_main_page.go_to_site()
     github_main_page.create_new_repo()
     github_repo_page = GitHubRepoManager(browser, browser.driver.current_url)
