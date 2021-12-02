@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Confidential information
-.secure_config.py
+secure_config.py
