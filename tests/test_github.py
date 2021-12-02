@@ -22,6 +22,6 @@ def test_create_new_repo(browser):
     github_main_page.create_new_repo()
     github_repo_page = GitHubRepoManager(browser, browser.driver.current_url)
     github_repo_page.go_to_site()
-    github_repo_page.fill_in_repo_data(repr(uuid.uuid4()), 'Custom description')
+    github_repo_page.fill_in_repo_data(repr(uuid.uuid4())[6:-2], 'Custom description')
     options = github_repo_page.check_repo_options_section()
     assert 'Add .gitignore' in options

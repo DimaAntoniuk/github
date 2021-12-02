@@ -4,7 +4,7 @@ from src.utils.locators import GitHubRepoPageLocators
 
 class GitHubRepoManager(BasePage):
 
-    def fill_in_repo_data(self, name=repr(uuid.uuid4()), description='My new repo'):
+    def fill_in_repo_data(self, name=repr(uuid.uuid4())[6:-2], description='My new repo'):
         name_field = self.find_element(GitHubRepoPageLocators.NAME)
         name_field.click()
         name_field.send_keys(name)
