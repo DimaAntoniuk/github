@@ -1,8 +1,10 @@
 import pytest
 from selenium import webdriver
 
+from src.driver.singleton import Singleton
+
 @pytest.fixture(scope="session")
 def browser():
-    driver = webdriver.Chrome(executable_path="./chromedriver")
+    driver = Singleton()
     yield driver
-    driver.quit()
+    driver.driver.quit()
